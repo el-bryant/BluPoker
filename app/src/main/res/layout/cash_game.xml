@@ -1,0 +1,698 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearMesa"
+    android:background="@drawable/background"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/trebol_filtro"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre mesa"
+                        android:inputType="text"
+                        android:textSize="12dp"
+                        android:background="@drawable/nombre_mesa"
+                        android:textAlignment="center"
+                        android:layout_weight="2"
+                        android:textColor="@color/blanco"
+                        android:id="@+id/etNombreMesaCash"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginHorizontal="4dp"
+                        android:visibility="visible">
+
+                        <RadioButton
+                            android:id="@+id/rbMesa3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/blanco"
+                            android:text="3"
+                            android:textColor="@color/blanco"
+                            android:onClick="CantidadNo"/>
+
+                        <ImageView
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:background="@drawable/icouser"
+                            android:backgroundTint="@color/blanco"
+                            android:layout_marginHorizontal="4dp"/>
+
+                        <RadioButton
+                            android:id="@+id/rbMesa6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:buttonTint="@color/blanco"
+                            android:layout_marginLeft="8dp"
+                            android:textColor="@color/blanco"
+                            android:onClick="CantidadSi"/>
+
+                        <ImageView
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:background="@drawable/icouser"
+                            android:backgroundTint="@color/blanco"
+                            android:layout_marginHorizontal="4dp"
+                            android:textColor="@color/blanco"/>
+
+                        <RadioButton
+                            android:id="@+id/rbMesa9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9"
+                            android:buttonTint="@color/blanco"
+                            android:layout_marginLeft="8dp"
+                            android:checked="true"
+                            android:textColor="@color/blanco"
+                            android:onClick="CantidadSi"/>
+
+                        <ImageView
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:background="@drawable/icouser"
+                            android:backgroundTint="@color/blanco"
+                            android:layout_marginHorizontal="4dp"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Acción:"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/rbAccion15s"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="15s"
+                        android:buttonTint="@color/blanco"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="@color/blanco"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccion20s"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="20s"
+                        android:buttonTint="@color/blanco"
+                        android:layout_marginHorizontal="10dp"
+                        android:checked="true"
+                        android:textColor="@color/blanco"/>
+
+                    <RadioButton
+                        android:id="@+id/rbAccion30s"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="30s"
+                        android:buttonTint="@color/blanco"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="@color/blanco"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciegas:"
+                        android:textColor="@color/blanco"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:textSize="15sp"/>
+
+                    <Button
+                        android:id="@+id/btnCiegasMin"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:background="@drawable/boton4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:onClick="menosciegas"
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCiegaMinima"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:padding="5dp"
+                        android:text="0.10"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" / "
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco"/>
+
+                    <TextView
+                        android:id="@+id/tvCiegaMaxima"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:padding="5dp"
+                        android:text="0.20"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco"/>
+
+                    <Button
+                        android:id="@+id/btnCiegasMax"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="+"
+                        android:textStyle="bold"
+                        android:background="@drawable/boton4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:onClick="masciegas"
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Entrada:"
+                            android:textColor="@color/blanco"
+                            android:padding="5dp"
+                            android:textSize="15sp"
+                            android:layout_weight="50"/>
+
+                        <EditText
+                            android:id="@+id/etEntradaMinima"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Mínimo"
+                            android:textAlignment="center"
+                            android:inputType="number"
+                            android:textColor="@color/blanco"/>
+
+                        <EditText
+                            android:id="@+id/etEntradaMaxima"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:hint="Máximo"
+                            android:textAlignment="center"
+                            android:inputType="number"
+                            android:textColor="@color/blanco"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_margin="5dp">
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <Switch
+                    android:id="@+id/sComienzoA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Comienzo automático"
+                    android:theme="@style/SwitchTheme"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:checked="true"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"
+                    android:onClick="ComienzoA"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/ll_RadioGroup">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:id="@+id/rgCAuto">
+
+                        <RadioButton
+                            android:id="@+id/rbComienzo2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/blanco"
+                            android:text="2"
+                            android:checked="true"
+                            android:textColor="@color/blanco"/>
+
+                        <ImageView
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:background="@drawable/icouser"
+                            android:backgroundTint="@color/blanco"
+                            android:layout_marginHorizontal="4dp"/>
+
+                        <RadioButton
+                            android:id="@+id/rbComienzo3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:buttonTint="@color/blanco"
+                            android:text="3"
+                            android:textColor="@color/blanco"/>
+
+                        <ImageView
+                            android:id="@+id/imvComienzo3"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:background="@drawable/icouser"
+                            android:backgroundTint="@color/blanco"
+                            android:layout_marginHorizontal="4dp"/>
+
+                        <RadioButton
+                            android:id="@+id/rbComienzo4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:buttonTint="@color/blanco"
+                            android:text="4"
+                            android:textColor="@color/blanco"/>
+
+                        <ImageView
+                            android:id="@+id/imvComienzo4"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:background="@drawable/icouser"
+                            android:backgroundTint="@color/blanco"
+                            android:layout_marginHorizontal="4dp"/>
+
+                        <RadioButton
+                            android:id="@+id/rbComienzo5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:buttonTint="@color/blanco"
+                            android:text="5"
+                            android:textColor="@color/blanco"/>
+
+                        <ImageView
+                            android:id="@+id/imvComienzo5"
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:background="@drawable/icouser"
+                            android:backgroundTint="@color/blanco"
+                            android:layout_marginHorizontal="4dp"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/sExtensionA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Extensión automática"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:theme="@style/SwitchTheme"
+                    android:checked="true"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"
+                    android:onClick="extensionA"/>
+
+                <LinearLayout
+                    android:id="@+id/llExtensionAutomaticaCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center|start"
+                    android:layout_margin="5dp"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Veces"
+                        android:textColor="@color/blanco"
+                        android:layout_weight="50"/>
+
+                    <Spinner
+                        android:id="@+id/sp_veces"
+                        android:layout_width="150dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/spinner_veces"
+                        android:spinnerMode="dialog"
+                        android:background="@drawable/spinner"
+                        android:layout_margin="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Gestión de riesgos"
+                    android:layout_marginHorizontal="5dp"
+                    android:textColor="@color/blanco"
+                    android:padding="5dp"
+                    android:textSize="15sp"/>
+
+                <CheckBox
+                    android:id="@+id/chkMultiveces"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Ejecutar Multi-veces"
+                    android:textSize="12dp"
+                    android:buttonTint="@color/blanco"
+                    android:textColor="@color/blanco"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:text="Rake:"
+                    android:padding="5dp"
+                    android:layout_weight="2"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"/>
+
+                <Spinner
+                    android:id="@+id/sp_rake"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:entries="@array/rake"
+                    android:textColor="@color/blanco"
+                    android:spinnerMode="dialog"
+                    android:background="@drawable/spinner"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <Switch
+                    android:id="@+id/sCallTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Calltime"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:theme="@style/SwitchTheme"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"
+                    android:onClick="CallTime"/>
+
+                <RadioGroup
+                    android:id="@+id/rgCallTimeCash"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:visibility="gone">
+
+                    <RadioButton
+                        android:id="@+id/rbCall15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/blanco"
+                        android:text="15mins"
+                        android:checked="true"
+                        android:textColor="@color/blanco"/>
+
+                    <RadioButton
+                        android:id="@+id/rbCall20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/blanco"
+                        android:text="20mins"
+                        android:textColor="@color/blanco"/>
+
+                    <RadioButton
+                        android:id="@+id/rbCall30"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:buttonTint="@color/blanco"
+                        android:text="30mins"
+                        android:textColor="@color/blanco"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <Switch
+                    android:id="@+id/sAutParaEntrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Autorizado para entrar"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:theme="@style/SwitchTheme"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="Duración de la mesa: "
+                    android:textColor="@color/blanco"
+                    android:layout_weight="2"
+                    android:textSize="15sp"/>
+
+                <Spinner
+                    android:id="@+id/sp_tiempoMesa"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:entries="@array/tiempoMesa"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/blanco"
+                    android:spinnerMode="dialog"
+                    android:background="@drawable/spinner"
+                    android:layout_margin="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btnEmpezar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Empezar"
+                android:textStyle="bold"
+                android:background="@drawable/boton3"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:onClick="empezarCashGame"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,41 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorHint">@color/blanco</item>
+        <item name="colorControlNormal">@color/blanco</item>
+        <item name="colorControlActivated">@color/blanco</item>
+        <item name="colorControlHighlight">@color/blanco</item>
+        <item name="android:spinnerStyle">@style/AppTheme.Spinner</item>
+        <item name="android:spinnerDropDownItemStyle">@style/AppTheme.DropDownSpinner</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="hinttext" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="SwitchTheme" parent="Theme.AppCompat.Light">
+        <item name="android:colorControlActivated">@color/blanco</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/blanco</item>
+    </style>
+
+    <style name="AppTheme.DropDownSpinner" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:textColor">@color/blanco</item>
+    </style>
+
+</resources>

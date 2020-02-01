@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_perfil"
+        android:icon="@drawable/user"
+        android:title="@string/perfil" />
+
+    <item
+        android:id="@+id/nav_clubes"
+        android:icon="@drawable/cartas"
+        android:title="@string/clubes" />
+
+    <item
+        android:id="@+id/nav_store"
+        android:icon="@drawable/regalo"
+        android:title="@string/blu_store" />
+
+    <item
+        android:id="@+id/nav_bonus"
+        android:icon="@drawable/trebol_blanco"
+        android:title="@string/blu_bonus" />
+
+</menu>

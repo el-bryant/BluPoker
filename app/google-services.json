@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "895844679278",
+    "firebase_url": "https://blupoker-590c2.firebaseio.com",
+    "project_id": "blupoker-590c2",
+    "storage_bucket": "blupoker-590c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895844679278:android:0ead068c4df69003",
+        "android_client_info": {
+          "package_name": "com.poker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "895844679278-tqlq2vudilntqus8dnqdnrctsjsleana.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.poker",
+            "certificate_hash": "9c28b904f81227810891cccfac622aeba6a9cf49"
+          }
+        },
+        {
+          "client_id": "895844679278-llg70c9ft59vtsr3l8kcffeko3jul91v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMj96eUR9-x1ukRuG1JfBp3zS3WUZB95M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895844679278-llg70c9ft59vtsr3l8kcffeko3jul91v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

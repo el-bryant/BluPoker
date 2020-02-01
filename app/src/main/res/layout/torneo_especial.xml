@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CrearMesa"
+    android:background="@drawable/background"
+    android:keepScreenOn="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Mesa sin nombre"
+                        android:inputType="text"
+                        android:textSize="14dp"
+                        android:textAlignment="center"
+                        android:background="@drawable/nombre_mesa"
+                        android:textColor="@color/blanco"
+                        android:layout_weight="2"/>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:layout_marginHorizontal="5dp"
+                        android:visibility="visible"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/mesa6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="6"
+                            android:buttonTint="@color/blanco"
+                            android:checked="true"
+                            android:textColor="@color/blanco"/>
+
+                        <ImageView
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:backgroundTint="@color/blanco"
+                            android:background="@drawable/icouser"
+                            android:layout_marginHorizontal="5dp"/>
+
+                        <RadioButton
+                            android:id="@+id/mesa9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9"
+                            android:buttonTint="@color/blanco"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/blanco"/>
+
+                        <ImageView
+                            android:layout_width="25sp"
+                            android:layout_height="25sp"
+                            android:background="@drawable/icouser"
+                            android:backgroundTint="@color/blanco"
+                            android:layout_marginHorizontal="5dp"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Acción:"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/accion15s"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="15s"
+                        android:buttonTint="@color/blanco"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="@color/blanco"/>
+
+                    <RadioButton
+                        android:id="@+id/accion20s"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="20s"
+                        android:buttonTint="@color/blanco"
+                        android:layout_marginHorizontal="10dp"
+                        android:checked="true"
+                        android:textColor="@color/blanco"/>
+
+                    <RadioButton
+                        android:id="@+id/accion30s"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:text="30s"
+                        android:buttonTint="@color/blanco"
+                        android:layout_marginHorizontal="10dp"
+                        android:textColor="@color/blanco"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Entrada:"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese un número entero hasta 10000"
+                    android:background="@drawable/numeroedit"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:textColor="@color/blanco"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_weight="2"
+                    android:textColorHint="@color/blanco"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:text="Rebuy:"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese un número entero hasta 10000"
+                    android:background="@drawable/numeroedit"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:textColor="@color/blanco"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_weight="2"
+                    android:textColorHint="@color/blanco"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:text="Add-on:"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingrese un número entero hasta 10000"
+                    android:background="@drawable/numeroedit"
+                    android:inputType="number"
+                    android:textSize="14dp"
+                    android:textColor="@color/blanco"
+                    android:layout_weight="2"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:textColorHint="@color/blanco"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:gravity="center|start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:padding="5dp"
+                        android:text="Rebuy:"
+                        android:textColor="@color/blanco"
+                        android:textSize="15sp"/>
+
+                    <Spinner
+                        android:id="@+id/sp_rebuy"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/rebuy"
+                        android:spinnerMode="dialog"
+                        android:background="@drawable/spinner"
+                        android:layout_margin="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Add-on:"
+                        android:padding="5dp"
+                        android:textColor="@color/blanco"
+                        android:textSize="15sp"/>
+
+                    <Spinner
+                        android:id="@+id/sp-addOn"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:entries="@array/addOn"
+                        android:spinnerMode="dialog"
+                        android:background="@drawable/spinner"
+                        android:layout_margin="5dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="Fichas iniciales:"
+                        android:textColor="@color/blanco"
+                        android:layout_weight="2"
+                        android:textSize="15sp"/>
+
+                    <Button
+                        android:id="@+id/btnMenosFichasI2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:background="@drawable/boton4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="12dp"
+                        android:onClick="menosFichasI2"
+                        android:layout_marginHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvFIniciales2"
+                        android:layout_width="99dp"
+                        android:layout_height="wrap_content"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:text="3000"
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:textColor="@color/blanco"/>
+
+                    <Button
+                        android:id="@+id/btnMasFichasI2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="+"
+                        android:textStyle="bold"
+                        android:background="@drawable/boton4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="5dp"
+                        android:onClick="masFichasI2"
+                        android:layout_marginHorizontal="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ciegas Arriba:"
+                        android:textColor="@color/blanco"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:textSize="15sp"/>
+
+                    <Button
+                        android:id="@+id/btnMenosCiegasA2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:background="@drawable/boton4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:onClick="menosCiegasArriba2"
+                        android:layout_marginHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvCiegasA2"
+                        android:layout_width="105dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="5 min"
+                        android:padding="5dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/blanco"/>
+
+                    <Button
+                        android:id="@+id/btnMasCiegasA2"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="+"
+                        android:textStyle="bold"
+                        android:background="@drawable/boton4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="5dp"
+                        android:onClick="masCiegasArriba2"
+                        android:layout_marginHorizontal="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Registro tardío no disponible:"
+                        android:textColor="@color/blanco"
+                        android:layout_weight="2"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:textSize="15sp"/>
+
+                    <Button
+                        android:id="@+id/btnMenosR"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="-"
+                        android:textStyle="bold"
+                        android:background="@drawable/boton4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="12dp"
+                        android:onClick="menosRegistros"
+                        android:layout_marginHorizontal="5dp"/>
+
+                    <TextView
+                        android:id="@+id/tvRegistroT"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="level 6"
+                        android:textAlignment="center"
+                        android:layout_marginHorizontal="5dp"
+                        android:padding="5dp"
+                        android:textColor="@color/blanco"/>
+
+                    <Button
+                        android:id="@+id/btnMasR"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:text="+"
+                        android:textStyle="bold"
+                        android:background="@drawable/boton4"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textAllCaps="false"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="5dp"
+                        android:onClick="masRegistros"
+                        android:layout_marginHorizontal="5dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="5dp"
+                            android:text="Jugadas Mín.:"
+                            android:textColor="@color/blanco"
+                            android:layout_weight="2"
+                            android:layout_margin="5dp"
+                            android:textSize="15sp"/>
+
+                        <Button
+                            android:id="@+id/btnMenosJugadasMin"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:text="-"
+                            android:textStyle="bold"
+                            android:background="@drawable/boton4"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="15dp"
+                            android:onClick="menosJugadasMin"
+                            android:layout_marginHorizontal="5dp"/>
+
+
+                        <TextView
+                            android:id="@+id/tvJugadasMin"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:padding="5dp"
+                            android:text="5"
+                            android:textAlignment="center"
+                            android:textColor="@color/blanco"/>
+
+                        <Button
+                            android:id="@+id/btnMasJugadasMin"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:text="+"
+                            android:textStyle="bold"
+                            android:background="@drawable/boton4"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="5dp"
+                            android:onClick="masJugadasMin"
+                            android:layout_marginHorizontal="5dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jugadas Máx.:"
+                            android:textColor="@color/blanco"
+                            android:layout_weight="2"
+                            android:padding="5dp"
+                            android:layout_margin="5dp"
+                            android:textSize="15sp"/>
+
+                        <Button
+                            android:id="@+id/btnMenosJugadasMax"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:text="-"
+                            android:textStyle="bold"
+                            android:background="@drawable/boton4"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="12dp"
+                            android:onClick="menosJugadasMax"
+                            android:layout_margin="5dp"/>
+
+                        <TextView
+                            android:id="@+id/tvJugadasMax"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:padding="5dp"
+                            android:text="5000"
+                            android:textAlignment="center"
+                            android:textColor="@color/blanco"/>
+
+                        <Button
+                            android:id="@+id/btnMasJugadasMax"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:text="+"
+                            android:textStyle="bold"
+                            android:background="@drawable/boton4"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textAllCaps="false"
+                            android:textSize="18sp"
+                            android:layout_marginLeft="5dp"
+                            android:onClick="masJugadasMax"
+                            android:layout_marginHorizontal="5dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    android:text="Velocidad:"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"/>
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_margin="5dp">
+
+                    <RadioButton
+                        android:id="@+id/Vnormal"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/blanco"
+                        android:text="Normal"
+                        android:checked="true"
+                        android:textColor="@color/blanco"/>
+
+                    <RadioButton
+                        android:id="@+id/Vturbo"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:buttonTint="@color/blanco"
+                        android:text="Turbo"
+                        android:textColor="@color/blanco"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:text="Inicio:"
+                    android:textColor="@color/blanco"
+                    android:textSize="15sp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Insertar fecha"
+                    android:onClick="showTimePickerDialog"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp"
+                android:padding="5dp">
+
+                <Switch
+                    android:id="@+id/AutParaEntrar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Torneos KO"
+                    android:theme="@style/SwitchTheme"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"/>
+
+                <Switch
+                    android:id="@+id/RestGps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Autorizado para registrar"
+                    android:theme="@style/SwitchTheme"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"/>
+
+                <Switch
+                    android:id="@+id/RestIp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Descanso 5 min cada 55 mins"
+                    android:theme="@style/SwitchTheme"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:checked="true"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:text="Premiación%"
+                        android:textColor="@color/blanco"
+                        android:textSize="15sp"/>
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_margin="10dp"
+                        android:layout_marginBottom="5dp">
+
+                        <RadioButton
+                            android:id="@+id/prem10"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="10%"
+                            android:buttonTint="@color/blanco"
+                            android:layout_marginHorizontal="10dp"
+                            android:checked="true"
+                            android:textColor="@color/blanco"/>
+
+                        <RadioButton
+                            android:id="@+id/prem15"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="15%"
+                            android:buttonTint="@color/blanco"
+                            android:layout_marginHorizontal="10dp"
+                            android:textColor="@color/blanco"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <Switch
+                    android:id="@+id/botePremio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Bote de premio garantizado"
+                    android:theme="@style/SwitchTheme"
+                    android:layout_margin="5dp"
+                    android:padding="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/blanco"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorPrimary" />
+
+            <Button
+                android:id="@+id/btnEmpezar"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Empezar"
+                android:textStyle="bold"
+                android:background="@drawable/boton3"
+                android:textColor="#ffffff"
+                android:textAllCaps="false"
+                android:textSize="20sp"
+                android:onClick="empezarTorneoEspecial"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:padding="10dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

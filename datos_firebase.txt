@@ -1,0 +1,11 @@
+ID de la app
+1:895844679278:android:0ead068c4df69003
+
+Sobrenombre de la app
+BluPoker
+
+Nombre del paquete
+com.poker
+
+Huellas digitales del certificado SHA-1
+9c:28:b9:04:f8:12:27:81:08:91:cc:cf:ac:62:2a:eb:a6:a9:cf:49

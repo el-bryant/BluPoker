@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_mesas"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="30dp"
+    card_view:cardBackgroundColor="@android:color/transparent"
+    card_view:cardElevation="0dp"
+    android:keepScreenOn="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/mesa_small">
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            card_view:layout_constraintTop_toTopOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintBottom_toTopOf="@id/linearLayout2">
+
+            <TextView
+                android:id="@+id/tvEntradaModalidadCard_mesa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="100 - Texas"
+                android:textSize="12sp"
+                android:textColor="@color/blanco"/>
+
+            <TextView
+                android:id="@+id/tvIdMesaCard_mesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="id_mesa"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            card_view:layout_constraintTop_toBottomOf="@id/linearLayout1"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent"
+            card_view:layout_constraintBottom_toTopOf="@id/linearLayout3">
+
+            <TextView
+                android:id="@+id/tvCiegaCard_mesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciegas: 500.00 / 1000.00"
+                android:textSize="12sp"
+                android:textColor="@color/blanco"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            card_view:layout_constraintTop_toBottomOf="@id/linearLayout2"
+            card_view:layout_constraintBottom_toBottomOf="parent"
+            card_view:layout_constraintStart_toStartOf="parent"
+            card_view:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvUsuariosActivosCantidadCard_mesa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usuarios: 0 / 0"
+                android:textColor="@color/blanco"
+                android:textSize="12sp"
+                android:background="@color/transparente"
+                android:padding="2dp"/>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
